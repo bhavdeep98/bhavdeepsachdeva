@@ -1,224 +1,201 @@
 <!DOCTYPE html>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV - Bhavdeep Singh Sachdeva</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Timeline</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* For left-aligning the professional summary */
-        .summary-text {
-          text-align: left; 
-          font-family: 'Lato', sans-serif;
-          font-size: 16px;
-        }
-        
-        /* Style for the bullet points in Professional Experience */
-        .cv-item-container ul {
-          list-style-type: disc;
-          padding-left: 20px;
-          margin-bottom: 10px;
-          font-family: 'Lato', sans-serif;
-          font-size: 16px;
-          line-height: 1.5;
-          text-align: left;
+        /* Timeline Specific Styles */
+        .timeline-wrapper {
+            background-color: #ffffff;
+            background-image: url("images/background.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            padding: 40px 20px;
+            position: relative;
         }
 
-        /* Specific style for Awards and Honors to match the bullet points */
-        .cv-item-container.awards ul {
-          list-style-type: disc;
-          padding-left: 20px;
-          margin-bottom: 10px;
-          font-family: 'Lato', sans-serif;
-          font-size: 16px;
-          line-height: 1.5;
-          text-align: left;
+        .timeline-header {
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #614200;
+            margin-bottom: 20px;
         }
 
-        /* General font styling for the entire document */
-        body {
-          font-family: 'Lato', sans-serif;
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 8px;
+            background-color: #614200;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            padding: 30px;
+            background: #ffeabd82;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 40%;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 60%;
+        }
+
+        .timeline-item-content {
+            text-align: left;
+        }
+
+        .timeline-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item-title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #614200;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item-date {
+            font-family: "Lato", sans-serif;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item-description {
+            font-family: "Lato", sans-serif;
+            font-size: 1.1rem;
+            color: black;
+            text-align: justify;
+        }
+
+        .timeline-item a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .timeline-item a:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .timeline-item {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            .timeline-line {
+                left: 50%;
+            }
         }
     </style>
-  <body>
-    <section id="cv">
-      <div class="container-2">
-        <div class="cv-title-container">
-          <h1>CV - Bhavdeep Singh Sachdeva</h1>
-          <a target="_blank" href="https://drive.google.com/file/d/1oEJrV9Zn_RSsNRJ0GzPb8Iy2BJz1B24z/view?usp=sharing">
-            <img class="cv-pdf-icon" src="images/pdf-64.png" alt="PDF Icon" />
-          </a>
+</head>
+<body>
+    <div class="timeline-wrapper">
+        <div class="timeline-header">Career Timeline</div>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <!-- Updated Timeline Items -->
+            <div class="timeline-item left">
+                <img src="images/timeline/AWSlogo.png" alt="AWS Logo">
+                <div class="timeline-item-content">
+                    <div class="timeline-item-title">Software Development Engineer at AWS</div>
+                    <div class="timeline-item-date">2021 - Present</div>
+                    <div class="timeline-item-description">
+                        Contributed to scalable and secure tier-1 services in the AWS GuardDuty team.
+                        <!-- <a href="articles.html?tag=career-highlights#aws-experience">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="images/timeline/cohere.png" alt="Cohere AI Logo">
+                <div class="timeline-item-content">
+                    <div class="timeline-item-title">Language Ambassador for Panjabi at Cohere</div>
+                    <div class="timeline-item-date">2023</div>
+                    <div class="timeline-item-description">
+                        Promoted multilingual AI as part of Project AYA, focusing on the Panjabi language.
+                        <a href="articles/preserving-panjabi-aya.html">Read More</a>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="timeline-item left">
+                <img src="images/timeline/ASUlogo.png" alt="ASU Logo">
+                <div class="timeline-item-content">
+                    <div class="timeline-item-title">M.S. Thesis at ASU</div>
+                    <div class="timeline-item-date">2019 - 2021</div>
+                    <div class="timeline-item-description">
+                        Conducted research on numerical reasoning benchmarks for NLP under Dr. Chitta Baral.
+                        <a href="research.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="images/timeline/UnisysLogo.png" alt="Unisys Logo">
+                <div class="timeline-item-content">
+                    <div class="timeline-item-title">Systems Engineer at Unisys</div>
+                    <div class="timeline-item-date">2016 - 2019</div>
+                    <div class="timeline-item-description">
+                        Worked on IPP implementation, database migration, and machine learning prototypes.
+                        <a href="articles/business-lessons-unisys.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <img src="images/timeline/panjab-university.svg" alt="UIET Logo">
+                <div class="timeline-item-content">
+                    <div class="timeline-item-title">Research and Leadership at UIET</div>
+                    <div class="timeline-item-date">2012 - 2016</div>
+                    <div class="timeline-item-description">
+                        During my time at UIET, I undertook research at the Design and Innovation Center (DIC) under the mentorship of <a href="https://www.linkedin.com/in/naveen-pu/" target="_blank">Dr. Naveen Aggarwal</a>. The project focused on utilizing acoustic signals to detect traffic states, contributing to advancements in smart traffic monitoring. <a href="https://content.iospress.com/articles/journal-of-intelligent-and-fuzzy-systems/ifs169259">Read More</a> 
+                        Additionally, I co-founded the CodeChef Campus Chapter, significantly enhancing student participation in competitive programming and fostering a culture of algorithmic problem-solving.
+                    </div>
+                </div>
+            </div>            
+
+            <div class="timeline-item right">
+                <img src="images/timeline/Ministry_of_Women_and_Child_Development.svg.png" alt="National Child Award">
+                <div class="timeline-item-content">
+                    <div class="timeline-item-title">National Child Award for Exceptional Achievement</div>
+                    <div class="timeline-item-date">2009</div>
+                    <div class="timeline-item-description">
+                        Recognized for outstanding performance in skating at a young age.
+                        <a href="https://pib.gov.in/newsite/erelcontent.aspx?relid=54038">Read More</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="cv-item-container">
-          <h2>Professional Summary</h2>
-          <p class="summary-text">
-            Experienced Software Development Engineer with a strong background in AI and machine learning, specializing in large language models and NLP technologies. Proficient in Python, PyTorch, and modern NLP tools (NLTK, SpaCy, BERT, RoBERTa). Demonstrated success in applying AI to real‑world applications, with a focus on developing and deploying neural networks in cloud environments (AWS). Committed to ethical AI development, with extensive research into the robustness and generalization of AI models. Actively seeks to integrate cutting‑edge AI technologies into scalable, secure solutions.
-          </p>
-        </div>
-
-        <div class="cv-item-container">
-          <h2>Professional Experience</h2>
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Software Development Engineer</h3>
-              <p>GuardDuty, Amazon Web Services</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Aug 2021 - Present</p>
-              <p>Seattle, WA</p>
-            </div>
-            <ul>
-              <li>Designed tier‑1 services for security opt‑in settings with focus on scalability and security.</li>
-              <li>Developed solutions with emphasis on software quality, scalability, and operational readiness.</li>
-            </ul>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Systems Engineer</h3>
-              <p>Stealth, Unisys</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Jul 2016 - Jun 2019</p>
-              <p>Bangalore, India</p>
-            </div>
-            <ul>
-              <li>Integrated LogRhythm’s security intelligence technology, enhancing threat detection capabilities and leading to a company partnership.</li>
-              <li>Contributed to adding IPP support in Enterprise Output Manager 14.0 for secure data transfer.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cv-item-container">
-          <h2>Education</h2>
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Arizona State University</h3>
-              <p>M.S. Thesis, Computer Science</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Aug 2019 - Aug 2021</p>
-              <p>Tempe, AZ</p>
-            </div>
-          </div>
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Panjab University</h3>
-              <p>B.Tech, Computer Science</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Jul 2012 - Jun 2016</p>
-              <p>Chandigarh, India</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-item-container">
-          <h2>Research Experience</h2>
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Punjabi Language Data Specialist</h3>
-              <p>AYA, Cohere for AI</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Jul 2023 - Dec 2023</p>
-              <p>Remote, USA</p>
-            </div>
-            <ul>
-              <li>Developed and curated a Punjabi text dataset, improving Cohere’s multilingual models' accuracy and inclusivity.</li>
-              <li>Enhanced NLP models for tasks like cross‑lingual content moderation and customer feedback analysis.</li>
-            </ul>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Research Assistant</h3>
-              <p>Cognition and Intelligence Lab, Arizona State University</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Aug 2020 - Jul 2021</p>
-              <p>Tempe, AZ, USA</p>
-            </div>
-            <ul>
-              <li>Co‑developed benchmarks for exposing weaknesses in numerical reasoning for NLP models.</li>
-              <li>Investigated generalization and robustness of AI models across domains.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cv-item-container">
-          <h2>Teaching Experience</h2>
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Arizona State University</h3>
-              <p>Graduate Services Assistant</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Fall, 2020</p>
-              <p>Tempe, AZ, USA</p>
-            </div>
-            <ul>
-              <li>Delivered laboratory lectures for Principles of Programming Languages (CSE 100).</li>
-              <li>Created online exams and hosted office hours and review sessions.</li>
-            </ul>
-          </div>
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Arizona State University</h3>
-              <p>Graduate Teaching Assistant</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Fall, 2019</p>
-              <p>Tempe, AZ, USA</p>
-            </div>
-            <ul>
-              <li>Delivered lectures to 241 students in Principles of Programming Languages (CSE 100).</li>
-              <li>Held office hours, review sessions, and proctored exams.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cv-item-container">
-          <h2>Publications</h2>
-          <div class="cv-item">
-            <ul>
-              <li><strong>Real‑Time Visual Feedback Benchmark Creation: EACL, 2023</strong> — Co‑authored a paper on benchmarks for real‑time AI applications, focusing on integrating human feedback loops to enhance reliability.</li>
-              <li><strong>NumGLUE: A Suite of Fundamental yet Challenging Mathematical Reasoning Tasks: ACL, 2022</strong> — Developed benchmarks for evaluating AI models' mathematical reasoning capabilities in complex tasks.</li>
-              <li><strong>Generalized but not Robust? Understanding the Effects of Out‑of‑Domain Generalization Methods: ACL, 2022</strong> — Investigated AI models' generalization capabilities across diverse datasets.</li>
-              <li><strong>DQI: A Guide to Benchmark Evaluation: ICML Workshop, 2020</strong> — Introduced a guide focusing on robustness and uncertainty in AI models.</li>
-              <li><strong>Do We Need to Create Big Datasets to Learn a Task?: SUSTAINLP, 2020</strong> — Explored AI training efficiency using smaller datasets.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cv-item-container">
-          <h2>Certifications</h2>
-          <div class="cv-item">
-            <div class="cv-item-left">
-              <h3>Generative AI with Large Language Models</h3>
-              <p>Credential ID MHFQVM3UEBR3</p>
-            </div>
-            <div class="cv-item-right">
-              <p>Issued Apr 2024</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cv-item-container awards">
-          <h2>Awards and Honors</h2>
-          <ul>
-            <li>Grand Prize Winner of Unisys India Hackathon, 2018</li>
-            <li>Silver Recognition Award, Unisys, 2018</li>
-            <li>Fan Favorite Award in Winter Hackfest India, 2017</li>
-            <li>Gold Recognition Award, Unisys, 2017</li>
-            <li>3rd Position in 14th Asian Roller Sports Championship, 2010</li>
-            <li>National Child Award for Exceptional Achievement, 2009</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </body>
+    </div>
+</body>
 </html>
